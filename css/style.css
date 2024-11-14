@@ -1,0 +1,192 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #000000bd;
+    display: flex;
+
+}
+
+.player{
+    
+    padding: 30px;
+    margin: auto;
+    color: #fff;
+    border: 1px solid rgb(97, 77, 77);
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    background-color: rgba(127, 255, 212, 0.288);
+
+}
+
+
+
+.player h1{
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    
+}
+
+.player img{
+    width: 120px;
+    height: 120px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+    object-fit: cover;
+    margin-bottom: 30px;
+    
+}
+
+
+
+.text h2, p, small{
+    margin-bottom: 20px;
+
+}
+
+.timeDiv{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0 10px 0;
+
+
+
+}
+
+.progressBar{
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+}
+
+.progressLine{
+    position: absolute;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background-color: blue;
+}
+
+
+.progressLine::after{
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: blue;
+    border-radius: 50%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 50px;
+}
+
+.controls button {
+
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.controls button i{
+    font-size: 1.2rem;
+}
+
+.controls button:nth-child(2) i{
+
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 1.8rem;
+  transition-duration: 200ms;
+  border-radius: 50%;
+
+}
+
+.controls button:nth-child(2):hover i{
+    scale: .9;
+}
+
+
+
+.repatLike{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.repatLike button{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.repatLike button:hover i{
+    scale: .9;
+}
+
+.repatLike button i{
+    font-size: 1.2rem;
+}
+.repeatMode{
+    color: blue;
+}
+
+.likeColourRed{
+    color: red;
+}
+
+.imageRotate{
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    100%{
+        transform: rotate(360deg);
+
+    }
+}
+
+@media (max-width : 764px) {
+    .player{
+        width: 98%;
+    }
+}
+
+
+
